@@ -77,6 +77,15 @@ parts:
       mkdir -pv $SNAPCRAFT_PART_INSTALL/gnome-platform
 
 plugs:
+  home:
+  removable-media:
+
+  personal-files:
+    read:
+      - $HOME/.emacs.d
+    write:
+      - $HOME/.emacs.d
+
   gnome-3-28-1804:
     interface: content
     target: $SNAP/gnome-platform
